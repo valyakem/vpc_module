@@ -44,7 +44,7 @@ module "route" {
   vpc_id              = module.vpc.instance_vpc_id
   public_subnet_id    = module.public_subnet.subnet_id
   internet_gateway_id = module.internet_gateway.my_vpc_internet_gateway_id
-  destination_cidr_block is optional. default value is provided in module
+  #destination_cidr_block is optional. default value is provided in module
   destination_cidr_block = var.destination_cidr_block
 }
 
