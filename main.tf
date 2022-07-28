@@ -39,7 +39,7 @@ module "internet_gateway" {
 }
 
 module "subnet" {
-  source = "./modules/subnet"
+  source = "./modules/subnets"
 
   vpc_id              = module.vpc.instance_vpc_id
 }
