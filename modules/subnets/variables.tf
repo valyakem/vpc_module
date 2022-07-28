@@ -29,7 +29,7 @@ variable "vpc_id" {
 #   default     = "0.0.0.0/0"
 # }
 
-# variable "internet_gateway_id" {
-#   description = "specify id of internet gateway"
-#   type        = string
-# }
+variable "internet_gateway_id" {
+  description = "specify id of internet gateway"
+  type        = string
+}

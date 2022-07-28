@@ -3,6 +3,11 @@ locals{
   az_names = "${data.aws_availability_zones.azs.names}"
 }
 
+//create a data source to get our azs
+data "aws_availability_zones" "azs" {
+  
+}
+
 resource "aws_subnet" "my_vpc_subnet" {
   count = "${length(local.az_names)}" //get the count of all availability zones refering to the local var name
   vpc_id     = var.vpc_id
