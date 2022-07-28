@@ -22,11 +22,8 @@ module "private_subnet" {
 
   vpc_id         = module.vpc.instance_vpc_id
   //vpc_cidr       = var.private_vpc_cidr
-  map_public_ip_on_launch = false
-  subent_name             = "private_subnet"
-  internet_gateway_id =
-  public_subnet_id = 
-  subnet_cidr_block = 
+
+  //subent_name             = "private_subnet"
 }
 
 module "security_group" {
