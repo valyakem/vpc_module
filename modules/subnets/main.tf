@@ -1,11 +1,6 @@
-//let us create a local variable to hold this
-locals{
-  az_names = "${data.aws_availability_zones.azs.names}"
-}
-
 //create a data source to get our azs
 data "aws_availability_zones" "azs" {
-  
+
 }
 
 resource "aws_subnet" "my_vpc_subnet" {
