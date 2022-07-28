@@ -13,10 +13,10 @@ variable "vpc_id" {
 #   type        = string
 # }
 
-variable "subent_name" {
-  description = "specify name of the subnet"
-  type        = string
-}
+# variable "subent_name" {
+#   description = "specify name of the subnet"
+#   type        = string
+# }
 
 # variable "public_subnet_id" {
 #   description = "specify id of the public subnet"
