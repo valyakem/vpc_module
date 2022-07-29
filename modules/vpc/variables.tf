@@ -1,17 +1,54 @@
-variable "instance_tenancy" {
-  description = "specify instance tenancy for the vpc"
+# Set variables
+variable "environment_name" {
   type        = string
-  default     = "default"
+  description = "Set environment name"
+  default     = ""
 }
 
-variable "vpc_cidr_block" {
-  description = "specify cidr block for the vpc"
+variable "vpc_cidr" {
   type        = string
-  default     = "10.0.0.0/16"
+  description = "VPC CIDR"
+  default     = ""
 }
 
-variable "vpc_name" {
-  description = "specify name for the vpc"
+variable "availability_zone" {
+  type        = list(string)
+  description = "Availability Zone"
+  default     = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+}
+
+variable "public_subnet_cidr_az_a" {
+  type        = list(string)
+  description = "Public subnet CIDR within AZ-a"
+  default     = []
+}
+
+variable "public_subnet_interfix" {
   type        = string
-  default     = "my-vpc"
+  description = "Give interfix to public subnet name"
+  default     = "public"
+}
+
+variable "private_subnet_cidr_az_a" {
+  type        = list(string)
+  description = "Private subnet CIDR within AZ-a"
+  default     = []
+}
+
+variable "private_subnet_interfix" {
+  type        = string
+  description = "Give interfix to private subnet name"
+  default     = "private"
+}
+
+variable "additional_tags" {
+  type        = map(string)
+  description = "Variable if additional tags is needed"
+  default     = {}
+}
+
+variable "default_route" {
+  type        = string
+  description = "Default Route from and to internet"
+  default     = "0.0.0.0/0"
 }
